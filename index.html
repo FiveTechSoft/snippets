@@ -25,7 +25,7 @@
 	 o[ 'source' ] = editor.getValue();
 	 console.log( 'PARAM', o );
 
-	 $.post( "https://harbour.fourtech.es/modharbour_samples/run.prg", o )
+	 $.post( "https://harbour.fourtech.es/modharbour_samples/snippets/run.prg", o )
 	    .done( function( data ) { console.log( 'DONE', data ); $('#result').html( data ); } )
 	    .fail( function( data ) { console.log( 'ERROR', data ); } ); 
       }	   
@@ -37,7 +37,7 @@
           o[ 'source' ] = editor.getValue();
           console.log( 'PARAM', o );
                 
-          $.post( "https://harbour.fourtech.es/modharbour_samples/id.prg", o )
+          $.post( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )
             .done( function( data ) { console.log( 'DONE', data ); $('#result').html( "https://fivetechsoft.com/snippets/" + data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 
       }

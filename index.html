@@ -48,7 +48,7 @@
       function GetCode()
       {
           $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg?src="+ window.location.search.substring( 1 ) )
-            .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data ); } )
+            .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data, -1 ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      
    </script>  

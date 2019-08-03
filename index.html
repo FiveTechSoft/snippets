@@ -46,7 +46,7 @@
       {
           var o = new Object();
       
-          o[ 'id' ] = window.location.search;
+          o[ 'id' ] = window.location.search.substring( 1 );
           console.log( 'PARAM', o );
                 
           $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )

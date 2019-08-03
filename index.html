@@ -47,12 +47,7 @@
 	   
       function GetCode()
       {
-          var o = new Object();
-      
-          o[ 'id' ] = window.location.search.substring( 1 );
-          console.log( 'PARAM', o );
-                
-          $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )
+          $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg?"+ window.location.search.substring( 1 ) )
             .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      

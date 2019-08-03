@@ -18,6 +18,8 @@
    </style>
 
    <script>
+      var editor;
+	   
       function Run()
       {
 	 var o = new Object();
@@ -51,7 +53,7 @@
           console.log( 'PARAM', o );
                 
           $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )
-            .done( function( data ) { console.log( 'DONE', data ); $('#editor').session.setValue( data ); } )
+            .done( function( data ) { console.log( 'DONE', data ); $('#editor').setValue( data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      
    </script>  
@@ -108,7 +110,7 @@ return nil
 </div>
           <script src="https://fivetechsoft.github.io/xcloud/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
           <script>
-             var editor = ace.edit("editor");
+             editor = ace.edit("editor");
              editor.setTheme("ace/theme/tomorrow_night_blue");
              editor.setFontSize(18);     
              editor.setHighlightActiveLine(true);

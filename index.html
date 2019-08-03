@@ -53,7 +53,7 @@
           console.log( 'PARAM', o );
                 
           $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )
-            .done( function( data ) { console.log( 'DONE', data ); $('#editor').setValue( data ); } )
+            .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      
    </script>  

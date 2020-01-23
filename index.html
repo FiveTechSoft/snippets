@@ -27,7 +27,7 @@
 	 o[ 'source' ] = editor.getValue();
 	 console.log( 'PARAM', o );
 
-	 $.post( "https://harbour.fourtech.es/modharbour_samples/snippets/run.prg", o )
+	 $.post( "http://54.37.60.32/samples/run.prg", o )
 	    .done( function( data ) { console.log( 'DONE', data ); $('#result').html( data ); } )
 	    .fail( function( data ) { console.log( 'ERROR', data ); } ); 
       }	   
@@ -39,7 +39,7 @@
           o[ 'source' ] = editor.getValue();
           console.log( 'PARAM', o );
                 
-          $.post( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg", o )
+          $.post( "http://54.37.60.32/samples/id.prg", o )
             .done( function( data ){ 
 	       console.log( 'DONE', data ); $('#result').html( "https://fivetechsoft.github.io/snippets?" + data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 
@@ -47,7 +47,7 @@
 	   
       function GetCode()
       {
-          $.get( "https://harbour.fourtech.es/modharbour_samples/snippets/id.prg?src="+ window.location.search.substring( 1 ) )
+          $.get( "http://54.37.60.32/samples/id.prg?src="+ window.location.search.substring( 1 ) )
             .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data, -1 ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      

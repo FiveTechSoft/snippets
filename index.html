@@ -27,7 +27,7 @@
 	 o[ 'source' ] = editor.getValue();
 	 console.log( 'PARAM', o );
 
-	 $.post( "https://www.modharbour.org/run.prg", o )
+	 $.post( "https://www.modharbour.org/modharbour_samples/run.prg", o )
 	    .done( function( data ) { console.log( 'DONE', data ); $('#result').html( data ); } )
 	    .fail( function( data ) { console.log( 'ERROR', data ); } ); 
       }	   
@@ -39,7 +39,7 @@
           o[ 'source' ] = editor.getValue();
           console.log( 'PARAM', o );
                 
-          $.post( "https://www.modharbour.org/snippets/id.prg", o )
+          $.post( "https://www.modharbour.org/modharbour_samples/snippets/id.prg", o )
             .done( function( data ){ 
 	       console.log( 'DONE', data ); $('#result').html( "https://fivetechsoft.github.io/snippets?" + data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 
@@ -47,7 +47,7 @@
 	   
       function GetCode()
       {
-          $.get( "https://www.modharbour.org/snippets/id.prg?src="+ window.location.search.substring( 1 ) )
+          $.get( "https://www.modharbour.org/modharbour_samples/snippets/id.prg?src="+ window.location.search.substring( 1 ) )
             .done( function( data ) { console.log( 'DONE', data ); editor.setValue( data, -1 ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 	 
       }	      

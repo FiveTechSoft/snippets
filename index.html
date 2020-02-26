@@ -126,7 +126,7 @@
                 
           $.post( "https://www.modharbour.org/modharbour_samples/snippets/id.prg", o )
             .done( function( data ){ 
-	         console.log( 'DONE', data ); $('#result').html( "https://fivetechsoft.github.io/snippets?" + data ); } )
+	         console.log( 'DONE', data ); $('#output').html( "https://fivetechsoft.github.io/snippets?" + data ); } )
             .fail( function( data ) { console.log( 'ERROR', data ); } ); 
       }
 	   
